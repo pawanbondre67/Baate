@@ -1,0 +1,46 @@
+.formContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* width: 100%; */
+    background-color: #a0e2d592;
+}
+.formWrapper{
+    /* width: 100%; */
+    max-width: 600px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+/* --------- Register page ---------- */
+
+#registerForm{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input{
+
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+  
+
+}
+
+/* --------- Login page ---------- */
+#loginForm{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
