@@ -1,6 +1,8 @@
 import React from 'react';
 import './login_register.css';
 import Login from './Login';
+import Add from '../assets/addAvatar.png';
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 const Register = () => {
   return (
@@ -13,10 +15,16 @@ const Register = () => {
             <input type="text" placeholder='display name' id="" />
             <input type="text" placeholder='email' id="" />
             <input type="password" placeholder='password' id="" />
-            <input type="file" />
+            <input  style={{display: 'none'}}  type="file" id='file'/>
+            <label htmlFor="file">
+              <img src={Add} alt="" />
+              <span>Add avatar</span>
+            </label>
             <button>Sign Up</button>
         </form>
-        <p>Have an account ? <a href={Login}>Login</a></p>
+        <p>Have an account ? 
+          </p>
+         
         </div>
     </div>
       

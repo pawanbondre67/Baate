@@ -28,19 +28,71 @@
     gap: 10px;
 }
 
-input{
-
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
-    border-radius: 5px;
-    outline: none;
-  
-
+label{
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    gap: 10px;
+    color: #292d1c;
+    font-size: 12px;
+    cursor: pointer;
+}
+img{
+    width: 32px;
 }
 
+input{
+
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+    width: 300px;
+    border-bottom: 1px solid #ccc;
+     &::placeholder{
+        color: rgb(175, 175, 175)
+     }
+}
+
+button{
+    padding: 15px;
+    border:none;
+    background-color: #a0e2d5e9;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+p{
+    font-size: 12px;
+    color: #292d1c;
+}
 /* --------- Login page ---------- */
 #loginForm{
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+
+/* -------home section ---------- */
+.home{
+    background-color: #a1a9a792;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.container{
+    border: 1px solid  white;
+    border-radius: 15px;
+    min-width:60%;
+    height: 80%;
+    display: flex;
+    overflow: hidden;
+}
+.chatinfo{
+  flex:2;
 }
