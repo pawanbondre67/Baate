@@ -1,22 +1,44 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import './App.css'
 import Home from './pages/Home';
 import Register from './pages/Register';
 import Login from './pages/Login';
+import { useContext } from 'react';
+import { BrowserRouter as  Router, Routes, Route, Link, Navigate } from "react-router-dom";
+import { AuthContext } from './components/context/AuthContext';
 
 function App() {
-  const [count, setCount] = useState(0)
+const {currentUser} = useContext(AuthContext);
+  
+const ProtectedRoute =({children})=>{ 
+  if(!currentUser){
+    return <Navigate to='/login'/>  
+  }
+  return children;
+};
+
 
   return (
     <>
-    <Home/>
-    
+      <Router>
+        <Routes>
+          <Route path='/'>
+            
+              <Route index element={
+               <ProtectedRoute>
+              <Home />
+              </ProtectedRoute>
+              } />
+              <Route path='/register' element={<Register />} />
+              <Route path='/login' element={<Login />} />
+          
 
-    {/* <Register/> */}
+          </Route>
+        </Routes>
+      </Router>
 
-    {/* <Login/> */}
+       
     </>
   )
 }
